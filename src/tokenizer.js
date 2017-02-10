@@ -54,7 +54,7 @@ const tokenizers = [
   tokenizeName
 ]
 
-const tokenizer = (input) => {
+export const tokenizer = (input) => {
   let current = 0
   let tokens = []
   let char
@@ -79,5 +79,3 @@ const tokenizer = (input) => {
   console.log('tokens', tokens)
   return tokens
 }
-
-module.exports = tokenizer

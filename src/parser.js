@@ -49,7 +49,7 @@ const parseExpression = (tokens, current) => {
   return [current, node]
 }
 
-const parseProgram = (tokens) => {
+export const parseProgram = (tokens) => {
   let current = 0
   let ast = {
     type: 'Program',
@@ -63,5 +63,3 @@ const parseProgram = (tokens) => {
   console.log('ast:', ast)
   return ast
 }
-
-module.exports = parseProgram

@@ -1,13 +1,11 @@
-const tokenizer = require('./tokenizer')
-const parser = require('./parser')
-const emitter = require('./emitter')
+import { tokenizer } from './tokenizer'
+import { parseProgram as parser } from './parser'
+import { emitter } from './emitter'
 
-const compiler = (input) => {
+export const compiler = (input) => {
   let tokens = tokenizer(input)
   let ast = parser(tokens)
   let output = emitter(ast)
 
   return output
 }
-
-console.log(compiler('(add 1 2 (mult 3 4))'))

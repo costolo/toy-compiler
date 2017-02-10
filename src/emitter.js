@@ -3,7 +3,7 @@ const emitString = (node) => `${node.value}`
 const emitProgram = (node) => node.body.map((exp) => `${emitter(exp)};`).join('\n')
 const emitExpression = (node) => `${node.name}(${node.params.map(emitter).join(', ')})`
 
-const emitter = (node) => {
+export const emitter = (node) => {
   switch (node.type) {
     case 'Program': return emitProgram(node)
     case 'CallExpression': return emitExpression(node)
@@ -12,5 +12,3 @@ const emitter = (node) => {
     default: throw new TypeError(node.type)
   }
 }
-
-module.exports = emitter
