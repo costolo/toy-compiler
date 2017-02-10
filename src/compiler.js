@@ -7,5 +7,5 @@ export const compiler = (input) => {
   let ast = parser(tokens)
   let output = emitter(ast)
 
-  return output
+  return {tokens, output, ast}
 }

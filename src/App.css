@@ -1,0 +1,40 @@
+html,
+body,
+.App,
+.codeContainer,
+.codeInput {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.codeForm {
+  width: 40vw;
+  height: 5vh;
+  margin: 2% auto;
+}
+
+.codeInput {
+  font-size: 2em;
+  text-align: center;
+}
+
+.codeContainer {
+  display: flex;  
+  justify-content: space-around;
+}
+
+.block {
+  width: 33vw;
+}
